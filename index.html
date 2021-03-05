@@ -3,12 +3,143 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/font-specs.css">
 </head>
 
 <body>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <ul class="nav-bar">
+                    <li class="nav-item"><a href="index.html">Resume</a></li>
+                    <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="persons-name">Tsurankou Yauheni: RS-school student</h1>
+            <h2>Junior Web Developer</h2>
+            <div class="resume-wrapper">
+                <div class="photo"><img src="img/photo.jpg" alt="my-photo"></div>
+                <div class="main-info">
+                    <h2 class="resume-header">Resume</h2>
+                    <div class="resume-item">
+                        <h4>About me:</h4>
+                        <p>I can describe myself as an inquisitive and hardworking person who don’t afraid of challanges. Achieving goals gives me a lot of pleasure. I’m interested in programming and always try to search for new areas to explore and get
+                            useful information.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Skills:</h4>
+                        <ul class="skills-list">
+                            <li>Python &#10029; &#10029; &#10029; &#9734; &#9734;
+                                <ul>
+                                    <li>Flask &#10029; &#10029; &#9734; &#9734; &#9734;</li>
+                                </ul>
+                            </li>
+                            <li>C++ &#10029; &#10029; &#10029; &#9734; &#9734;</li>
+                            <li>Javasript &#10029; &#10029; &#10029; &#9734; &#9734;</li>
+                            <li>SQL &#10029; &#10029; &#10029; &#9734; &#9734;</li>
+                            <li>CSS/HTML &#10029; &#10029; &#10029; &#10029; &#10029;</li>
+                            <li>Git &#10029; &#10029; &#9734; &#9734; &#9734;</li>
+                            <li>Architectural patterns &#10029; &#10029; &#9734; &#9734; &#9734;</li>
+                            <li>Figma, Photoshop, Illustrator &#10029; &#10029; &#10029; &#10029; &#9734;</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Foreign languages:</h4>
+                        <p>My English level is above average and i can describe it as intermediate or upper-intermediate according to the CEFR.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Education:</h4>
+                        <p>I’m studying Web and Application development at Belarusian State University.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works-wrapper" id="portfolio">
+                <h2>My portfolio</h2>
+                <div class="works-container">
+                    <h3>Design</h3>
+                    <div class="works-block">
+                        <div>
+                            <a href="https://cdn1.savepice.ru/uploads/2021/3/3/7e751895a14396304438693803a81406-full.png">
+                                <figure><img src="img/ezhevika.png" alt="Blackberry" /></figure>
+                                <span>Blackberry in Illustrator</span>
+                            </a>
+
+                        </div>
+                        <div>
+                            <a href="https://ibb.co/HxrwZ8Z">
+                                <figure><img src="img/Globus.png" alt="Globus.tut.by redesign" /></figure>
+                                <span>Globus.tut.by redesign</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://ibb.co/ry5GGK3">
+                                <figure><img src="img/Slonim.png" alt="Slonim landing page" /></figure>
+                                <span>Slonim landing page</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="works-container">
+                    <h3>Javascript code examples:</h3>
+                    <div class="works-block code-block">
+                        <h4>
+                            Matrix towel sort:
+                        </h4>
+                        <div class="code-example">
+                            <pre><code>const towelSort = matrix => Array.isArray(matrix) ?
+    matrix.reduce((sortedArr, currentArr, currentIndex) =>
+        sortedArr.concat(isOdd(currentIndex) ? currentArr : currentArr.reverse()), []) : [];
+const isOdd = number => !(number % 2);</code></pre>
+                        </div>
+                        <h4>
+                            Function to calculate depth of Array:
+                        </h4>
+                        <div class="code-example">
+                            <pre><code>class DepthCalculator {
+    calculateDepth(arr) {
+        return 1 + (Array.isArray(arr) ? arr.reduce((max, item) => {
+            return Math.max(max, this.calculateDepth(item));
+        }, 0) : -1);
+    }
+};</code></pre>
+                        </div>
+                        <h4>
+                            Extended repeater function:
+                        </h4>
+                        <div class="code-example">
+                            <pre><code>function repeater(str, options) {
+    return new Array(options.repeatTimes)
+        .fill(
+            String(str).concat(new Array(options.additionRepeatTimes)
+                .fill(options.addition !== undefined ? String(options.addition) : '')
+                .join(options.additionSeparator || '|'))
+        ).join(options.separator || '+');
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <h2 id="contacts">Personal contacts:</h2>
+                <ul class="icons-list">
+                    <li>
+                        <a class="social-icon tg-icon" href="https://t.me/ne_palito"></a>
+                    </li>
+                    <li>
+                        <a title="801#7049" class="social-icon discord-icon" href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 
 </body>
 
