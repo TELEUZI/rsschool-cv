@@ -1,0 +1,52 @@
+figure {
+    width: 300px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+figure:hover+span {
+    opacity: 1;
+}
+
+.works-container:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.works-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.works-block figure img {
+    width: 450px;
+    height: auto;
+    transition: .3s ease-in-out;
+}
+
+.works-block figure:hover img {
+    width: 300px;
+}
+
+.works-block span {
+    font-size: 18px;
+    text-align: center;
+    transition: .3s ease-in-out;
+    opacity: 0;
+}
+
+.code-block {
+    flex-direction: column;
+}
+
+.code-example {
+    background-color: #369766;
+    color: aliceblue;
+    padding: 20px;
+}
+
+.code-example:not(:last-child) {
+    margin-bottom: 30px;
+}
