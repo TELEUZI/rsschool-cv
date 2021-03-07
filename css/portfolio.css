@@ -42,9 +42,9 @@ figure:hover+span {
 }
 
 .code-example {
+    padding: 20px;
     background-color: #369766;
     color: aliceblue;
-    padding: 20px;
 }
 
 .code-example:not(:last-child) {
